@@ -15,13 +15,14 @@ applications/finance/payment_acquirers/paypal.rst applications/finance/payment_p
 applications/finance/payment_acquirers/sips.rst applications/finance/payment_providers/sips.rst                                       # /payment_acquirers/* -> /payment_providers/*
 applications/finance/payment_acquirers/stripe.rst applications/finance/payment_providers/stripe.rst                                   # /payment_acquirers/* -> /payment_providers/*
 applications/finance/payment_acquirers/wire_transfer.rst applications/finance/payment_providers/wire_transfer.rst                     # /payment_acquirers/* -> /payment_providers/*
+applications/finance/accounting/others/analytic/usage.rst applications/finance/accounting/others/analytic/analytic_accounting.rst     # /analytic/usage --> /analytic/analytic_accounting
+applications/finance/accounting/others/analytic/timesheets.rst applications/finance/accounting/others/analytic/analytic_accounting.rst # /analytic/timesheets --> /analytic/analytic_accounting
+applications/finance/accounting/others/analytic/purchase_expenses.rst applications/finance/accounting/others/analytic/analytic_accounting.rst # /analytic/purchase_expenses --> /analytic/analytic_accounting
 
 # applications/websites
 
 applications/websites/ecommerce/shopper_experience/payment_acquirer.rst applications/websites/ecommerce/shopper_experience/payment_providers.rst # payment_acquirer -> payment_providers
 
-
 # developer/reference/frontend
 
 developer/reference/frontend/icons_library.rst contributing/development/ui/icons.rst # Odoo UI icons -> UI Icons
-
