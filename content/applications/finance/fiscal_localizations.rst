@@ -4,15 +4,25 @@
 Fiscal localizations
 ====================
 
+With the Ecuadorian localization you can generate electronic documents with its XML, Fiscal folio,
+with electronic signature and direct connection to tax authority SRI.
+
+The supported documents are Invoices, Credit Notes, Debit Notes, Purchase Liquidations and
+Withholds.
+
+The localization also Includes automations to easily predict the withholding tax to be applied to
+each purchase invoice.
+
+
 .. _fiscal_localizations/packages:
 
 Fiscal localization packages
 ============================
 
 **Fiscal Localization Packages** are country-specific modules that install pre-configured taxes,
-fiscal positions, chart of accounts, and legal statements on your database. Some additional features,
-such as the configuration of specific certificates, are also added to your Accounting app, following
-your fiscal administration requirements.
+fiscal positions, chart of accounts, and legal statements on your database. Some additional
+features, such as the configuration of specific certificates, are also added to your Accounting app,
+following your fiscal administration requirements.
 
 .. note::
    Odoo continuously adds new localizations and improves the existing packages.
@@ -75,7 +85,7 @@ available on Odoo.
 - Czech - Accounting
 - Denmark - Accounting
 - Dominican Republic - Accounting
-- Ecuadorian - Accounting
+- :doc:`Ecuadorian - Accounting <fiscal_localizations/ecuador>`
 - :doc:`Egypt - Accounting <fiscal_localizations/egypt>`
 - Ethiopia - Accounting
 - Finnish Localization
@@ -140,6 +150,7 @@ available on Odoo.
    fiscal_localizations/chile
    fiscal_localizations/colombia
    fiscal_localizations/colombia_ES
+   fiscal_localizations/ecuador
    fiscal_localizations/egypt
    fiscal_localizations/france
    fiscal_localizations/germany
