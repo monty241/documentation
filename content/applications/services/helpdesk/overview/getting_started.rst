@@ -2,63 +2,128 @@
 Getting Started
 ===============
 
-Helpdesk teams provide your customers with support to queries or errors they might encounter while
-using your product/service. Therefore, a successful scheme where you can organize multiple teams
-with their customized pipeline, visibilities settings, and ticket traceability is essential.
+Helpdesk teams provide customers with support to queries or issues they might encounter while using
+a product/service. Therefore, having a system in place where multiple teams can co-exist with their
+own customized pipeline, visibility settings, and ticket traceability is essential.
 
 Set up teams
 ============
 
-| To modify or create teams, go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`.
-| Setting up multiple teams allows you to group tickets by your channels (example: BE/US), or by
-  your support services' types (example: IT, accounting, admin, etc.).
+Setting up multiple teams allows for tickets to be grouped by location
+(example: :abbr:`BE/US(Belgium/United States)` ), or by support type (example: IT, accounting, etc.).
 
-.. image:: getting_started/helpdesk_teams_view.png
+To modify or create teams, go to :menuselection:`Helpdesk --> Configuration --> Teams`.
+
+.. image:: getting_started/helpdesk_teams_list.png
    :align: center
    :alt: View of the helpdesk teams page in Odoo Helpdesk
 
-Team’s productivity and visibility
-----------------------------------
+Assignments and visibility
+--------------------------
 
-Teams can have individual *Assignment Methods* to ensure that tickets get redirected to the right
-person:
+Visibility
+~~~~~~~~~~
+The *Visibility* feature specifies who can view this team:
 
-- *Manually*: tickets are manually assigned, allowing employees to manage their own workload and
-  target tickets they are experts at;
-- *Random*: tickets are randomly assigned and everyone gets the same amount. This method ensures
-  that all tickets are handled as the assignment happens automatically;
-- *Balanced*: tickets are assigned to the person with the least amount of tickets so that everyone
-  fairly gets the same amount. Thereby, you ensure that all tickets get to be taken care of.
+- :guilabel:`Invited internal users`: Internal users will have access to the team and tickets
+  they are following. This access can be modified on each individual ticket.
+- :guilabel:`All internal users`: All internal users will be able to access the team and all of its
+  tickets without being a follower.
+- :guilabel:`Invited portal users and all internal users`: All internal users can access the team
+  and all of its tickets without being a follower. Portal users will only be able to access tickets
+  that they are following.
 
-.. image:: getting_started/productivity_visibility.png
+This guarantees that tickets with sensitive or proprietary information will only be seen by the
+appropriate users.
+
+Automatic Assignment
+~~~~~~~~~~~~~~~~~~~~
+Teams can enable *Automatic Assignment* to ensure tickets are redirected to the right person. This
+will also ensure that nothing falls through the cracks, as it guarantees all tickets are immediately
+assigned to a team member.
+
+Select one of the following assignment methods:
+
+- Each user is assigned an equal number of tickets
+- Each user has an equal number of open tickets
+
+.. image:: getting_started/assignment_visibility.png
    :align: center
-   :alt: View of a helpdesk team settings page emphasizing the productivity and visibility features
+   :alt: View of a helpdesk team settings page emphasizing the assignment and visibility features
          in Odoo Helpdesk
 
-| For the *Random* and *Balanced* assignment methods, you can set the *Team Members* among
-  whom tickets are assigned. Leave the field empty to include all employees (with the proper
-  access rights).
-| The *Team Visibility* feature allows you to specify who can see and access the team’s tickets.
-  Therefore, ticket’s with sensible information are only seen by the right people.
-  Leave the field empty to include all employees (with the proper access rights).
 
-Set up stages and share it among teams
-======================================
+Once :guilabel:`Automatic Assignment` has been enabled, set the *Team Members* among whom tickets
+are assigned. Leave the field empty to include all employees (with the proper access rights).
+Employees will be skipped if they have recorded time off in the system. If no employees are
+available, the system will look ahead until there is a match.
 
-To set up stages, go to :menuselection:`Helpdesk --> Configuration --> Stages`. Then, create and/or
-edit stages as you need and set specific teams to use certain stages under *Team*.
+.. seealso::
+  - :doc:`receiving_tickets`
+  - :doc:`../advanced/after_sales`
 
-.. image:: getting_started/stages_teams.png
+
+Setting up stages
+=================
+
+Stages are customizable, and can be renamed to fit the needs of each team.
+
+To configure existing stages, and create new stages, go to
+:menuselection:`Helpdesk --> Configuration --> Stages --> Create`.
+
+.. image:: getting_started/stages_reordering.png
    :align: center
-   :alt: View of a stage’s setting page emphasizing the option to add teams in Odoo Helpdesk
+   :alt: View of the stage list page emphasizing the option to reorder stages in the workflow
 
-Stages can be shared between one or multiple teams, allowing you to adapt the pipeline to your
-individual needs. They also apply a visibility and access rule, as other teams are not able to see
-or use the stage.
+.. tip::
+  The arrow buttons on the left side of the list can be used to change the order of the stages in the
+  workflow.  Change the stage order on the kanban view by dragging and dropping individual columns.
 
-.. image:: getting_started/helpdesk_kanbanview.png
+
+.. image:: getting_started/stage_settings.png
    :align: center
-   :alt: View of a team’s kanban view in Odoo Helpdesk
+   :alt: View of a stage's settings page in Odoo Helpdesk
+
+Email and SMS templates
+-----------------------------------
+Stages can be configured to automatically send emails or SMS text messages to a customer.
+
+Select an existing email template in the dropdown menu, or create a new template by typing in the
+field :guilabel:`Email Template`.
+
+An SMS template can also be added to send an automated text message to a customer once a ticket has
+reached the stage.
+
+.. image:: getting_started/sms_template.png
+   :align: center
+   :alt: View of an SMS template setup page in Odoo Helpdesk
+
+.. important::
+  SMS Text Messaging is an In-App Purchase (IAP) service that requires prepaid credits to work.
+  Refer to :doc:`SMS Pricing and FAQ </applications/marketing/sms_marketing/pricing/pricing_and_faq>`
+  for additional information.
+
+Sharing stages among teams
+---------------------------------------
+A stage can be used by more than one team, but only when it has been assigned. Select the team names
+the stage will be used for from the :guilabel:`Team` dropdown.
+
+Folding a stage
+---------------------
+Stages can be set to be :guilabel:`Folded in Kanban` by default. When a ticket reaches a *folded*
+stage, it is considered closed.
+
+.. image:: getting_started/folded_closing.png
+   :align: center
+   :alt: View of the 'Folded in Kanban' setting enabled
+
+.. tip::
+  Stages can be temporarily folded in the kanban view, as seen below. This will not close the tickets
+  in this stage.
+
+.. image:: getting_started/folded_in_pipeline.png
+   :align: center
+   :alt: View of Fold setting in Kanban pipeline
 
 .. seealso::
    - :doc:`/applications/general/users`
