@@ -22,6 +22,9 @@ applications/websites/ecommerce/getting_started/catalog.rst applications/website
 applications/websites/ecommerce/getting_started/product_page.rst applications/websites/ecommerce/managing_products/products.rst                  # /getting_started/product_page -> /managing_products/products
 applications/websites/ecommerce/shopper_experience/payment_acquirer.rst applications/websites/ecommerce/shopper_experience/payment_providers.rst # payment_acquirer -> payment_providers
 
+# applications/purchase
+
+applications/inventory_and_mrp/purchase/manage_deals/agreements.rst applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst      # agreements.rst -> blanket_orders.rst
 
 # developer/reference/frontend
 
