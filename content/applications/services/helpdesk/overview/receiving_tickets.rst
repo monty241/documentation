@@ -2,85 +2,103 @@
 Start Receiving Tickets
 =======================
 
-Offering a variety of channels from where your customers can contact you grants them flexibility
-and the right to choose the best one for themselves. And, in order to make sure inquiries across
-all channels get addressed, it is essential to have a solution where all interactions come in one
-place.
+Helpdesk offers multiple channels where customers can reach out for assistance. In order to ensure
+all inquiries are addressed in a timely fashion, it is essential that all interactions are received
+in one central location.
 
-Channels options to submit tickets
+Channel options to submit tickets
 ==================================
 
-Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`, and enable the following
-features as you want them to be available to your users.
+Go to :menuselection:`Helpdesk --> Configuration --> Teams --> Channels` to select which
+channel options to enable. The available channels are *Email Alias*, *Website Form*, and
+*Live Chat*.
 
-.. image:: receiving_tickets/channels_options.png
+.. image:: receiving_tickets/receivingtickets_channeloptions.png
    :align: center
    :alt: View of a helpdesk teams setting page emphasizing the channels options in Odoo Helpdesk
 
 Email Alias
 -----------
 
-| Let your customers submit tickets by sending an email to your support email address. The subject
-  line of the email becomes the title of the ticket and the content is shown in the Chatter.
-| Select *Configure domain name* to be redirected to *Settings* and, from there, enable *External
-  Email Servers* to determine or change your *Alias Domain*.
+With this setting, users can create a ticket by sending an email to a custom email alias. The
+subject line of the email becomes the title of the ticket and the body of the message is added to
+the Chatter.
 
-.. image:: receiving_tickets/channels_emailalias.png
+Select :guilabel:`Configure a custom domain` to be redirected to :guilabel:`Settings` and, from
+there, enable :guilabel:`Custom Email Servers` to determine or change an :guilabel:`Alias Domain`.
+Click :guilabel:`Save`.
+
+.. image:: receiving_tickets/receivingtickets_emailalias.png
    :align: center
-   :height: 250
    :alt: View of the settings page of a helpdesk team emphasizing the email alias feature
          in Odoo Helpdesk
 
 .. note::
-   Using your own email server is required to send and receive emails in Odoo Community and
-   Enterprise. Online users benefit from a ready-to-use email server.
+   Using an external email server is required to send and receive emails for On-Premise databases.
+   Odoo Online and Odoo.sh customers benefit from a ready-to-use email server.
 
 Website Form
 ------------
 
-| Allow your customers to submit a ticket by filling in a form through your website.
-| Once the feature is activated, get redirected to your website by clicking on *Go to Website*.
+This setting creates an online form that is added to the website. A new ticket is created once a
+completed form is submitted.
 
-.. image:: receiving_tickets/go_to_website.png
+After the feature is activated, click the :guilabel:`Go to Website` smart button on the team page.
+
+.. image:: receiving_tickets/receivingtickets_gotowebsite.png
    :align: center
    :alt: View of the settings page of a helpdesk team emphasizing the Go to Website button in
          Odoo Helpdesk
 
-From the website page customize the form as you like. Then, publish it by clicking on *Unpublished*.
+The website form can be customized using the web editor tools. This includes changing what fields
+are considered required or not. Once it has been updated, publish it by clicking on
+:guilabel:`Unpublished`.
 
-.. image:: receiving_tickets/submit_a_ticket_form.png
+.. image:: receiving_tickets/receivingtickets_webform.png
    :align: center
-   :alt: View of the website form to submit a ticket for Odoo Helpdesk
+   :alt: View of the unpublished website form to submit a ticket for Odoo Helpdesk
 
 Live Chat
 ---------
 
-| Through live interactions with your website visitors, helpdesk tickets can be instantly created
-  and redirected to the right person.
-| Click on your helpdesk team's name - for the example below: *Customer Care* -
-  and :doc:`set up your channel </applications/websites/livechat/overview/get_started>`.
+The Live Chat application allows website visitors to connect directly with a support agent or
+chatbot. During these conversations, Helpdesk tickets can be instantly created and assigned to the
+right team member.
 
-.. image:: receiving_tickets/live_chat.png
+Click on the Helpdesk team's name - for the example below: :guilabel:`Customer Care` - and
+:doc:`set up your channel </applications/websites/livechat/overview/get_started>`.
+
+.. image:: receiving_tickets/receivingtickets_livechat.png
    :align: center
    :alt: View of the settings page of a helpdesk team emphasizing the live chat features and links
          in Odoo Helpdesk
 
-Now, your operators can create tickets by using the
-:doc:`command </applications/websites/livechat/overview/responses>` */helpdesk (subject_of_ticket)*.
+Now, operators can create tickets by using the
+:doc:`command </applications/websites/livechat/overview/responses>` :guilabel:`/helpdesk`.
+
+.. seealso::
+   :doc:`/applications/websites/livechat/overview/responses`
 
 Prioritize tickets
 ==================
 
-Use the stars to prioritize your tickets. The most urgent ones appear at the top of your list on
-the Kanban view.
+All tickets include a :guilabel:`Priority` field. Tickets will be set to *Low Priority* by default,
+but the priority can be manually increased at the user’s discretion. The highest priority tickets
+will appear at the top of the Kanban and List views.
 
-- 1 star = *Low priority*
-- 2 stars = *High priority*
+The priority levels are represented by stars:
+
+- 0 stars = *Low Priority*
+- 1 star = *Medium Priority*
+- 2 stars = *High Priority*
 - 3 stars = *Urgent*
 
-.. image:: receiving_tickets/kanban_view_prioritize.png
+.. warning::
+   Priority levels can be used as criteria for assigning SLAs. Changing the priority level can
+   alter the SLA deadline and should be considered when changing priority levels.
+
+.. image:: receiving_tickets/receivingtickets_priority.png
    :align: center
-   :height: 330
    :alt: View of a team’s kanban view and the prioritized tasks in Odoo Helpdesk
 
 .. seealso::
