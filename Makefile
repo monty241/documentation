@@ -85,4 +85,4 @@ static: $(HTML_BUILD_DIR)/_static/style.css
 	cp -r static/* $(HTML_BUILD_DIR)/_static/
 
 test:
-	python tests/rst_style.py $(SOURCE_DIR)
+	python tests/rst_style.py $(SOURCE_DIR) redirects
